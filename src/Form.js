@@ -36,13 +36,14 @@ export default function Form() {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          className="searchField"
           type="search"
           placeholder="type your city"
           onChange={handleCity}
         />
         <input type="submit" value="search" className="button" />
       </form>
-      <ul>
+      <ul className="weatherData">
         <li>{temperature}</li>
         <li>{description}</li>
         <li>{humidity}</li>

@@ -3,7 +3,7 @@ import React from "react";
 export default function Cities() {
   return (
     <div>
-      <ul>
+      <ul className="cityList">
         <li>
           <a href="#">Stockholm</a>
         </li>

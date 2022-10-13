@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 1px grey solid;
+  border: 1px rgba(189, 195, 199, 0.5) solid;
   border-radius: 10px;
   padding: 20px;
 }
@@ -65,9 +65,11 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   border: solid 1px transparent;
+  box-shadow: 3px 2px 2px lightslategray;
 }
 
 .button:hover {
-  background-color: orange;
+  background-color: lightgrey;
   color: green;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }

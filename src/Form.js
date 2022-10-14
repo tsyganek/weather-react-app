@@ -6,13 +6,15 @@ export default function Form() {
 
   let [city, setCity] = useState("");
   let [temperature, setTemperature] = useState(null);
-  let [description, setDescription] = useState(null);
+  let [description, setDescription] = useState("");
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
   let [picture, setPicture] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&units=metric`;
+    axios.get(url).then(showData);
 
     function showData(response) {
       setTemperature(`Temperature: ${Math.round(response.data.main.temp)}°C`);

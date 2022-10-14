@@ -1,31 +1,26 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 export default function Cities() {
-  function handleCityLink(event) {
-    event.preventDefault();
-  }
   return (
     <div>
       <ul className="cityList">
         <li>
-          <a href="#" onClick={handleCityLink}>
+          <a href="#" className="stockholm">
             Stockholm
           </a>
         </li>
         <li>
-          <a href="#" onClick={handleCityLink}>
+          <a href="#" className="kyiv">
             Kyiv
           </a>
         </li>
         <li>
-          <a href="#" onClick={handleCityLink}>
+          <a href="#" className="valencia">
             Valencia
           </a>
         </li>
         <li>
-          <a href="#" onClick={handleCityLink}>
+          <a href="#" className="tokyo">
             Tokyo
           </a>
         </li>

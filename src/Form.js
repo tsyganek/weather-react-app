@@ -13,8 +13,6 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&units=metric`;
-    axios.get(url).then(showData);
 
     function showData(response) {
       setTemperature(`Temperature: ${Math.round(response.data.main.temp)}°C`);
